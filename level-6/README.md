@@ -7,13 +7,13 @@
 ### level-6 NetOrca demo instance details:
 - **url**       ->        https://level6.demo.netorca.io/
 - **username**  ->        admin
-- **password**  ->        GXqjGxwTmR2I
+- **password**  ->        YAkvwXYi3ocF
 
 
 ### Step 1. Fork the existing repositories
 
 We have create 3 repositories that you need to fork
-- **Customer A**                    -> https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
+- **Customer A**                    -> https://gitlab.cgitom/netorca_public/bigip-automation/level-6/customer-a
 - **(Service Owner) BIGIP Team**    -> https://gitlab.com/netorca_public/bigip-automation/level-6/service-owner-bigip-team
 - **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/level-6/bigip-team-automation
 
