@@ -179,9 +179,9 @@ Description of the repositories:
 
 ![step-2-1](../images/level6_demo_step2_1.gif)
 
-### Step 3. Merge the MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
+### Step 3. Merge MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
 
-> - After the MR is merged, the Submission job will be triggered and changes will be pushed to NetOrca.
+> - After MR is merged, the Submission job will be triggered and changes will be pushed to NetOrca.
 > - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) and create a corresponding Change Instance.
 
 #### Step 3.1. CREATE Change Instance
