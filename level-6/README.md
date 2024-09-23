@@ -141,9 +141,9 @@ We have created 3 repositories that you can play around with
 - **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/level-6/bigip-team-automation
 
 
-**Customer A** repository will hold NetOrca YAML files that will contain the application configuration.
-**(Service Owner) BIGIP Team** repository will hold JsonSchema definition of Services offered by BIGIP Team.
-**BIGIP Team Automation** repository contains automation used to create/modify/delete services in the BIG-IP.
+- **Customer A** repository holds NetOrca YAML files that will contain the application configuration.
+- **(Service Owner) BIGIP Team** repository holds JsonSchema definition of Services offered by BIGIP Team.
+- **BIGIP Team Automation** repository contains automation used to create/modify/delete services in the BIG-IP.
 
 
 ## Customer workflow
