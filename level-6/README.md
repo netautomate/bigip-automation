@@ -138,7 +138,7 @@ Customer:
 We have created 3 repositories that you can play around with
 - **Customer A**                    -> https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
 - **(Service Owner) BIGIP Team**    -> https://gitlab.com/netorca_public/bigip-automation/level-6/service-owner-bigip-team
-- **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/level-6/bigip-team-automation
+- **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/bigip-team-automation
 
 
 Description of the repositories:
