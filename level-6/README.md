@@ -146,7 +146,7 @@ We have created 3 repositories that you can play around with
 **BIGIP Team Automation** repository contains automation used to create/modify/delete services in the BIG-IP.
 
 
-### Customer flow
+## Customer workflow
 
 ### Step 1. Go to NetOrca Service Catalog and find the Service you want to request and get the example YAML definition.
 
