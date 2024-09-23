@@ -147,7 +147,7 @@ Description of the repositories:
 - **BIGIP Team Automation** repository contains automation used to create/modify/delete services in the BIG-IP.
 
 
-## Customer workflow
+## Customer flow
 
 ### Step 1. Go to NetOrca Service Catalog, find a Service you want to request and get the example YAML definition.
 
@@ -184,9 +184,14 @@ Description of the repositories:
 > - After the MR is merged, the Submission job will be triggered and changes will be pushed to NetOrca.
 > - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) and create a corresponding Change Instance.
 
-
+#### Step 3.1. CREATE Change Instance
 ![step-3](../images/level6_demo_step3.gif)
 
+#### Step 3.2. MODIFY Change Instance
+![step-3-2](../images/level6_demo_step3_2.gif)
+
+#### Step 3.3. DELETE Change Instance
+![step-3-3](../images/level6_demo_step3_3.gif)
 
 ### Step 4. Check status of your requests live in NetOrca GUI.
 
@@ -198,3 +203,7 @@ Description of the repositories:
 
 ![step-4](../images/level6_demo_step4.gif)
 
+
+---
+---
+## Service Owner flow
