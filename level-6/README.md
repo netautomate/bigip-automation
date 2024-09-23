@@ -149,7 +149,7 @@ Description of the repositories:
 
 ## Customer workflow
 
-### Step 1. Go to NetOrca Service Catalog and find the Service you want to request and get the example YAML definition.
+### Step 1. Go to NetOrca Service Catalog, find a Service you want to request and get the example YAML definition.
 
 > Service Catalogue is the place where you can find details for all the Services offered via NetOrca.
 > There are 3 tabs in the Service Catalogue:
@@ -162,7 +162,7 @@ Description of the repositories:
 ### Step 2. Copy example Load Balancer service definition and request it via your Customer A GitLab repository.
 
 > - In this step you will create a new branch, modify the example, create a merge request and watch the pipeline to pass.
-> - Your requests will be validated against NetOrca Service definition.
+> - Your requests will be sent to NetOrca and validated against Service definition.
 
 
 #### Step 2.1 Validation successful
@@ -173,16 +173,15 @@ Description of the repositories:
 
 #### Step 2.2. Validation failed
 
-> - In case of validation failure, you will see the error message in the pipeline logs.
-> - You will need to fix the request and create a new merge request.
+> - In case of validation failure, you will see the error message in the pipeline logs. Most likely you didn't add required properties or made a typo.
+> - You will need to fix the request and update merge request.
 
 
 ![step-2-1](../images/level6_demo_step2_1.gif)
 
-### Step 3. Merge the Merge Request into main and watch the CI/CD pipeline to run.
+### Step 3. Merge the MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
 
-> - In this step you will merge the MR into main and watch the CI/CD pipeline to run.
-> - Submission job will be triggered and changes will be pushed to NetOrca.
+> - After the MR is merged, the Submission job will be triggered and changes will be pushed to NetOrca.
 > - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) and create a corresponding Change Instance.
 
 
