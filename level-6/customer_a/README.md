@@ -27,7 +27,6 @@
 > - In case of validation failure, you will see the error message in the pipeline logs. Most likely you didn't add required properties or made a typo.
 > - You will need to fix the request and update merge request.
 
-
 ![step-2-1](../../images/level6_demo_customer_step2_1.gif)
 
 ### Step 3. Merge MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
