@@ -119,8 +119,8 @@ application1:
 > `UDF` environment is not available for this level.
 
 
-### level-6 NetOrca demo instance details:
-- **url**       ->        https://level6.demo.netorca.io/
+### f5devcentral NetOrca demo instance details:
+- **url**       ->        https://f5devcentral.demo.netorca.io/
 - **username**  ->        f5devcentral
 - **password**  ->        aut0m8t1on
 
@@ -128,7 +128,8 @@ application1:
 
 We have created 3 repositories that you can play around with
 - **Customer A**                    -> https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
-- **Customer B** -> TBD
+- **Customer B**                    -> doesn't have a configuration repository - this team's requests are submitted via the NetOrca Submission Builder (GUI)
+
 - **(Service Owner) BIGIP Team**    -> https://gitlab.com/netorca_public/bigip-automation/level-6/service-owner-bigip-team
 - **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/bigip-team-automation (NOTE: this can be put in the ServiceOwner repo)
 
@@ -136,6 +137,21 @@ Description of the repositories:
 - **Customer A** repository holds NetOrca YAML files that will contain the application configuration.
 - **(Service Owner) BIGIP Team** repository holds JsonSchema definition of Services offered by BIGIP Team.
 - **BIGIP Team Automation** repository contains automation used to create/modify/delete services in the BIG-IP.
+
+
+
+###NetOrca GUI:
+1. Context switching:
+  - NetOrca gives you the ability to be a Service Owner and a Customer.
+  - You can offer your services as a Service Owner and in the same time request other services from the same NetOrca instance.
+
+
+2. Team switching:
+  - NetOrca allows users to be a part of multiple teams and switch between them easily. 
+  - This is helpful when you are working with multiple teams and need to view the state of a team's requests, or submit requests for them
+
+
+![alt text](./images/level6_demo_context_team_switching.gif)
 
 Instructions for interacting with each stage of the demo is here:
 
@@ -145,5 +161,3 @@ Instructions for interacting with each stage of the demo is here:
 - [BigIP Team - processing customer requested changes from NetOrca](bigip_processing/README.md)
 
 ---
-
-

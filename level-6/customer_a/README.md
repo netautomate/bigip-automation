@@ -8,7 +8,7 @@
 > - **Schema** - detailed JsonSchema definition of the Service - you can look up the details for each property
 > - **Example** - generator of yaml/json code for the Service
 
-![step-1](../images/level6_demo_step1.gif)
+![step-1](../../images/level6_demo_customer_step1.gif)
 
 ### Step 2. Copy example Load Balancer service definition and request it via your Customer A GitLab repository.
 
@@ -20,7 +20,7 @@
 
 > - Once the pipeline is green, that meants the request is valid and can be merged to main branch.
 
-![step-2](../images/level6_demo_step2.gif)
+![step-2](../../images/level6_demo_customer_step2.gif)
 
 #### Step 2.2. Validation failed
 
@@ -28,7 +28,7 @@
 > - You will need to fix the request and update merge request.
 
 
-![step-2-1](../images/level6_demo_step2_1.gif)
+![step-2-1](../../images/level6_demo_step2_1.gif)
 
 ### Step 3. Merge MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
 
@@ -36,13 +36,13 @@
 > - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) and create a corresponding Change Instance.
 
 #### Step 3.1. CREATE Change Instance
-![step-3](../images/level6_demo_step3.gif)
+![step-3](../../images/level6_demo_customer_step3.gif)
 
 #### Step 3.2. MODIFY Change Instance
-![step-3-2](../images/level6_demo_step3_2.gif)
+![step-3-2](../../images/level6_demo_customer_step3_2.gif)
 
 #### Step 3.3. DELETE Change Instance
-![step-3-3](../images/level6_demo_step3_3.gif)
+![step-3-3](../../images/level6_demo_customer_step3_3.gif)
 
 ### Step 4. Check status of your requests live in NetOrca GUI.
 
@@ -52,5 +52,5 @@
 > - The REJECTED status means that the Service Owner has rejected the request due to an issue.
 > - The COMPLETED status indicates that the request has been successfully deployed on the BIG-IP system.
 
-![step-4](../images/level6_demo_step4.gif)
+![step-4](../../images/level6_demo_customer_step4.gif)
 
