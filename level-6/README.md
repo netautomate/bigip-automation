@@ -121,89 +121,29 @@ application1:
 
 ### level-6 NetOrca demo instance details:
 - **url**       ->        https://level6.demo.netorca.io/
-- **username**  ->        admin
-- **password**  ->        YAkvwXYi3ocF
-
-Service Owner:
-- **username**  ->        bigip_team1
+- **username**  ->        f5devcentral
 - **password**  ->        aut0m8t1on
-
-Customer:
-- **username**  ->        customer_a1
-- **password**  ->        aut0m8t1on
-
 
 ### Look into the repositories
 
 We have created 3 repositories that you can play around with
 - **Customer A**                    -> https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
+- **Customer B** -> TBD
 - **(Service Owner) BIGIP Team**    -> https://gitlab.com/netorca_public/bigip-automation/level-6/service-owner-bigip-team
-- **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/bigip-team-automation
-
+- **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/bigip-team-automation (NOTE: this can be put in the ServiceOwner repo)
 
 Description of the repositories:
 - **Customer A** repository holds NetOrca YAML files that will contain the application configuration.
 - **(Service Owner) BIGIP Team** repository holds JsonSchema definition of Services offered by BIGIP Team.
 - **BIGIP Team Automation** repository contains automation used to create/modify/delete services in the BIG-IP.
 
+Instructions for interacting with each stage of the demo is here:
 
-## Customer flow
-
-### Step 1. Go to NetOrca Service Catalog, find a Service you want to request and get the example YAML definition.
-
-> Service Catalogue is the place where you can find details for all the Services offered via NetOrca.
-> There are 3 tabs in the Service Catalogue:
-> - **README** - information about the Service provided by the Service Owner
-> - **Schema** - detailed JsonSchema definition of the Service - you can look up the details for each property
-> - **Example** - generator of yaml/json code for the Service
-
-![step-1](../images/level6_demo_step1.gif)
-
-### Step 2. Copy example Load Balancer service definition and request it via your Customer A GitLab repository.
-
-> - In this step you will create a new branch, modify the example, create a merge request and watch the pipeline to pass.
-> - Your requests will be sent to NetOrca and validated against Service definition.
-
-
-#### Step 2.1 Validation successful
-
-> - Once the pipeline is green, that meants the request is valid and can be merged to main branch.
-
-![step-2](../images/level6_demo_step2.gif)
-
-#### Step 2.2. Validation failed
-
-> - In case of validation failure, you will see the error message in the pipeline logs. Most likely you didn't add required properties or made a typo.
-> - You will need to fix the request and update merge request.
-
-
-![step-2-1](../images/level6_demo_step2_1.gif)
-
-### Step 3. Merge MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
-
-> - After MR is merged, the Submission job will be triggered and changes will be pushed to NetOrca.
-> - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) and create a corresponding Change Instance.
-
-#### Step 3.1. CREATE Change Instance
-![step-3](../images/level6_demo_step3.gif)
-
-#### Step 3.2. MODIFY Change Instance
-![step-3-2](../images/level6_demo_step3_2.gif)
-
-#### Step 3.3. DELETE Change Instance
-![step-3-3](../images/level6_demo_step3_3.gif)
-
-### Step 4. Check status of your requests live in NetOrca GUI.
-
-> - At this stage, the responsibility for processing the customer request shifts to the Service Owner.
-> - By default, the Change Instance will be in a PENDING state, awaiting approval from the Service Owner.
-> - The APPROVED status indicates that the Service Owner has validated and approved the request.
-> - The REJECTED status means that the Service Owner has rejected the request due to an issue.
-> - The COMPLETED status indicates that the request has been successfully deployed on the BIG-IP system.
-
-![step-4](../images/level6_demo_step4.gif)
-
+- [BigIp Team - Defining and declaring a Service onto NetOrca](bigip_team/README.md)
+- [Customer A - Requesting a Service Item via GIT](customer_a/README.md)
+- [Customer B - Requesting a Service Item via the GUI](customer_b/README.md)
+- [BigIP Team - processing customer requested changes from NetOrca](bigip_processing/README.md)
 
 ---
----
-## Service Owner flow
+
+
