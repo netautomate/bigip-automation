@@ -4,7 +4,6 @@ Services are defined in JsonSchema format which are then stored in GitLab reposi
 All changes to the Service definitions are done via GitLab repository and submitted to NetOrca via CICD pipeline.
 
 ## Service Owner flow
-
 ### Step 1. Create Service definition in JsonSchema format
 
 ```md
@@ -64,6 +63,7 @@ All changes to the Service definitions are done via GitLab repository and submit
   }
   
 ```
+
 
 ### Step 2. Create README.md file with explanation of the Service and example usage
 
@@ -126,8 +126,8 @@ application1:
 > - "Minimum Schema Version" - Service Owner can set minimum schema version that Customer can request
 >   * Services can be upgraded, this feature allows backward compatibility for already existing Service Items
 
-
 ![step-4](../../images/level6_demo_service_owner_settings.png)
+
 
 ### Step 5. Get familiar with ADVANCED FEATURES (Versioning, Backward Compatibility, Service Configs, Allowed Teams, Dependant Teams)
 
