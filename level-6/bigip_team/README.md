@@ -107,7 +107,6 @@ application1:
 ```
 
 
-```
 ### Step 3. Create a Merge Request with the changes, merge to main branch
 
 > - after merge to main branch, CICD pipeline will be triggered and new Service will be available in NetOrca
@@ -118,5 +117,24 @@ application1:
 
 ### Step 4. Play around with Service settings in NetOrca GUI
 
+> - NetOrca gives ability to control behaviour of the Service and Service Items with the following settings:
+> - "Approval Required" - by default new Change Instances are preapproved, but Service Owner can change it to manually (or automatically) approve Change Instances
+>   * useful in cases where Service Owner needs to do some validations in external services before approving changes
+> - "Enable email notifications" - Service Owner will be notified about new Change Instances
+> - "Allow Manual Approval" - Service Owner can approve/reject Change Instances in NetOrca GUI
+> - "Allow Manual Completion" - Service Owner can complete Change Instances in NetOrca GUI
+> - "Minimum Schema Version" - Service Owner can set minimum schema version that Customer can request
+>   * Services can be upgraded, this feature allows backward compatibility for already existing Service Items
 
-### Step 5. Get familiar with ADVANCED FEATURES (versioning, service configs, allowed teams, dependant teams)
+
+![step-4](../../images/level6_demo_service_owner_settings.png)
+
+### Step 5. Get familiar with ADVANCED FEATURES (Versioning, Backward Compatibility, Service Configs, Allowed Teams, Dependant Teams)
+
+> - NetOrca offers a powerful set of features to manage and configure services.
+> - Some of the key features include:
+>   - Versioning: Each service can have multiple versions, allowing for easy rollback or comparison of changes.
+>   - Backward Compatibility: NetOrca ensures that new versions of a service are compatible with older versions, preventing breaking changes.
+>   - Service Configs: Services can have multiple configurations, allowing for customization based on different environments or requirements.
+>   - Allowed Teams: Services can be restricted to specific teams, ensuring that only authorized personnel can access or modify them.
+>   - Dependant Teams: Services can have dependant teams, meaning that changes to the service will also trigger changes in the dependant teams.
