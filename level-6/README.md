@@ -8,7 +8,6 @@ The end result of this is that our diagram is changed to the following:
 
 ![level-6](../images/lvl6_img1.png)
 
-
 # Table of Contexts
 
 - [Use case workflow](#use-case-workflow)
