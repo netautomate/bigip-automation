@@ -121,7 +121,7 @@ application1:
 ### f5devcentral NetOrca demo instance details:
 - **url**       ->        https://f5devcentral.demo.netorca.io/
 - **username**  ->        f5devcentral
-- **password**  ->        aut0m8t1on
+- **password**  ->        netorcaf5
 
 ### Look into the repositories
 
