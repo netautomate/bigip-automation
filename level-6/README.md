@@ -139,7 +139,7 @@ Description of the repositories:
 
 
 
-###NetOrca GUI:
+### NetOrca GUI:
 1. Context switching:
   - NetOrca gives you the ability to be a Service Owner and a Customer.
   - You can offer your services as a Service Owner and in the same time request other services from the same NetOrca instance.
