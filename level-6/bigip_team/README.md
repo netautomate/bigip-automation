@@ -115,7 +115,7 @@ application1:
 ![step-3](../../images/netorca_demo_service_owner.gif)
 
 
-### Step 4. Play around with Service settings in NetOrca GUI
+### Step 4. Modify required Service settings in NetOrca GUI
 
 > - NetOrca gives ability to control behaviour of the Service and Service Items with the following settings:
 > - "Approval Required" - by default new Change Instances are preapproved, but Service Owner can change it to manually (or automatically) approve Change Instances
