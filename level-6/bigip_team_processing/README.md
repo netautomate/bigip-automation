@@ -19,7 +19,9 @@ Change Instance Lifecycle is as follows:
 - **PENDING** - Change Instance is created and waits for approval/validation by Service Owner.
 - **PENDING -> APPROVED** - Change Instance is approved by Service Owner
 - **PENDING -> REJECTED** - Change Instance is rejected by Service Owner because of some validation/compliance issues.
+
 <br>
+
 - **APPROVED** - Change Instance is approved by Service Owner and is ready for deployment/implementation in the infrastructure.
 - **APPROVED -> COMPLETED** - Change Instance is deployed into the infrastructure and completed.
 - **APPROVED -> ERROR** - Change Instance is not deployed due to some error.
