@@ -4,3 +4,5 @@ In `level-7` we will scale the demo up again by introducing mutliple Service Own
 
 
 Our diagram now looks like the following:
+
+![level-7](../images/level7_overview.png)
