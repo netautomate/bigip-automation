@@ -38,20 +38,22 @@ Change Instance Lifecycle is as follows:
 > This step takes Change Instance state from PENDING to APPROVED, or PENDING to REJECTED.
 > Depends on the Service configuration, newly created Change Instance can be automatically approved or requires manual approval.
 
-#### Step 2.1. Change Instance is automatically approved
+#### Step 2.1. Change Instance is preapproved
 > When Change Instance is automatically approved it appears in NetOrca with statue "APPROVED" - at this stage it's ready for deployment.
 
-
-TODO: gif here
+![step_2_1](../../images/level6_demo_so_step_2_1.gif)
 
 
 #### Step 2.2. Change Instance requires manual approval
 > When Change Instance requires manual approval it appears in NetOrca with status "PENDING" - it needs to be validated by Service Owner either via GUI or API.
 > This gives additional control over requests that come into NetOrca. For example, Load Balancer Service requires IP addresses to be added to the declaration. Service Owner may want to check in external systems (like Infoblox or whatever is used in the organisation) if given IP address is available for use before APPROVING Change Instance.
 
-### Step 2.2.1. Change Instance APPROVED via GUI
-TODO: gif here
+![step_2_2](../../images/level6_demo_so_step_2_2.gif)
 
+
+### Step 2.2.1. Change Instance APPROVED via GUI
+
+![step_2_2_1](../../images/level6_demo_so_step_2_2_1.gif)
 ### Step 2.2.2. Change Instance APPROVED via API (programmatically)
 TODO: gif here
 
