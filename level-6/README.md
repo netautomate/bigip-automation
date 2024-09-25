@@ -150,7 +150,7 @@ Description of the repositories:
   - This is helpful when you are working with multiple teams and need to view the state of a team's requests, or submit requests for them
 
 
-![alt text](./images/level6_demo_context_team_switching.gif)
+![team_switching](../images/level_6_demo_context_team_switching.gif)
 
 Instructions for interacting with each stage of the demo is here:
 
