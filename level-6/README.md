@@ -154,9 +154,9 @@ Description of the repositories:
 
 Instructions for interacting with each stage of the demo is here:
 
-- [BigIp Team - Defining and declaring a Service onto NetOrca](bigip_team/README.md)
 - [Customer A - Requesting a Service Item via GIT](customer_a/README.md)
 - [Customer B - Requesting a Service Item via the GUI](customer_b/README.md)
-- [BigIP Team - processing customer requested changes from NetOrca](bigip_processing/README.md)
+- [BigIP Team - Defining and declaring a Service onto NetOrca](bigip_team/README.md)
+- [BigIP Team - processing customer requested changes from NetOrca](bigip_team_processing/README.md)
 
 ---
