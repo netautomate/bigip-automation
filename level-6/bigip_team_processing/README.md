@@ -56,6 +56,7 @@ Change Instance Lifecycle is as follows:
 ![step_2_2_1](../../images/level6_demo_so_step_2_2_1.gif)
 
 ### Step 2.2.2. Change Instance APPROVED via API (programmatically)
+
 TODO: gif here
 
 
