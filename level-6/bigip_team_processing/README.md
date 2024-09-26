@@ -72,10 +72,14 @@ TODO: gif here
 > * mark Change Instances as COMPLETED if automation run is successful
 
 
-#### Step 3.1. Change Instance is automatically deployed with Ansible Playbook
+#### Step 3.1. Change Instances are automatically deployed with Ansible
 
 TODO: gif here
 
-#### Step 3.2. Change Instance is automatically deployed with Terraform
+#### Step 3.2. Change Instances areautomatically deployed with Terraform
 
-TODO: gif here
+![terraform_deploy](../../images/level6_demo_so_terraform_deploy.gif)
+
+#### Step 3.3. Change Instances are deployed manually
+> Some NetOrca Services may require manual deployment of the infrastructure. For example fragile production environment cannot be automated because safety reasons.
+> You can still accept requests via NetOrca for such scenarios to have a powerful audit trail and visibility into customer requests.
