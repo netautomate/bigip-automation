@@ -1,5 +1,5 @@
 # Overview
-Service Owner teams are responsible for creating and maintaing their Services in NetOrca. This is covered in [BIGIP_TEAM](../bigip_team/README.md).<br>
+Service Owner teams are responsible for creating and maintaining their Services in NetOrca. This is covered in [BIGIP_TEAM](../bigip_team/README.md).<br>
 Another responsibility of Service Owners is to process requests submitted by customers. Service Owners need to establish a workflow for processing Change Instances that come in to their queue.
 
 
