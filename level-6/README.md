@@ -8,6 +8,10 @@ The end result of this is that our diagram is changed to the following:
 
 ![level-6](../images/lvl6_img1.png)
 
+As overview, NetOrca has replaced the need for an infrastructure as code repository for the bigip team. Allowing for their declarations to be derived directly from the customer requested state. 
+
+The repositories that the bigip team now owns are for defining the service schema, and managing the terraform/ansible plays that are required to push the config to BigIP.
+
 # Table of Contexts
 
 - [Use case workflow](#use-case-workflow)
