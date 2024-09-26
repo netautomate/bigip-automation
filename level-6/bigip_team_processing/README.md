@@ -76,7 +76,7 @@ TODO: gif here
 
 TODO: gif here
 
-#### Step 3.2. Change Instances areautomatically deployed with Terraform
+#### Step 3.2. Change Instances are automatically deployed with Terraform
 
 ![terraform_deploy](../../images/level6_demo_so_terraform_deploy.gif)
 
