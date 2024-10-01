@@ -59,12 +59,6 @@ Change Instance Lifecycle is as follows:
 - **APPROVED -> COMPLETED** - Change Instance is deployed into the infrastructure and completed.
 - **APPROVED -> ERROR** - Change Instance is not deployed due to some error.
 
-
-## Quick Demo
-
-We have set up
-
-
 ## Workflow scenarios
 
 ### Step 1. Customer submits a brand new Service Item
