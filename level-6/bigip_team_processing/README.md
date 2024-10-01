@@ -27,6 +27,11 @@ Change Instance Lifecycle is as follows:
 - **APPROVED -> ERROR** - Change Instance is not deployed due to some error.
 
 
+## Quick Demo
+
+We have set up
+
+
 ## Workflow scenarios
 
 ### Step 1. Customer submits a brand new Service Item
@@ -38,27 +43,16 @@ Change Instance Lifecycle is as follows:
 > This step takes Change Instance state from PENDING to APPROVED, or PENDING to REJECTED.
 > Depends on the Service configuration, newly created Change Instance can be automatically approved or requires manual approval.
 
-#### Step 2.1. Change Instance is preapproved
-> When Change Instance is automatically approved it appears in NetOrca with statue "APPROVED" - at this stage it's ready for deployment.
+#### Step 2.1. Change Instance is APPROVED
 
-![step_2_1](../../images/level6_demo_so_step_2_1.gif)
+APPROVED is the ready to deploy state for that Change Instance. 
 
+There are multiple configurable options for approval including:
+- PreApproved changes
+- Approval via GUI
+- Approval via API
 
-#### Step 2.2. Change Instance requires manual approval
-> When Change Instance requires manual approval it appears in NetOrca with status "PENDING" - it needs to be validated by Service Owner either via GUI or API.
-> This gives additional control over requests that come into NetOrca. For example, Load Balancer Service requires IP addresses to be added to the declaration. Service Owner may want to check in external systems (like Infoblox or whatever is used in the organisation) if given IP address is available for use before APPROVING Change Instance.
-
-![step_2_2](../../images/level6_demo_so_step_2_2.gif)
-
-
-### Step 2.2.1. Change Instance APPROVED via GUI
-
-![step_2_2_1](../../images/level6_demo_so_step_2_2_1.gif)
-
-### Step 2.2.2. Change Instance APPROVED via API (programmatically)
-
-TODO: gif here
-
+These are covered in detail in the NetOrca docs.
 
 ### Step 3. Change Instance is deployed
 > This step takes Change Instance state from APPROVED to COMPLETED.
@@ -75,7 +69,16 @@ TODO: gif here
 
 #### Step 3.1. Change Instances are automatically deployed with Ansible
 
-TODO: gif here
+In this demo we have set up two Ansible plays that will both validate (move to APPROVED) and deploy (move to COMPLETED) any customer Service Items to a lab F5
+
+These are located here:
+![VALIDATION play](https://awx.netorca.io/#/templates/job_template/41/details)
+
+When you run this play you should see any PENDING change Instances for the LOAD_BALANCER service move to APPROVED
+
+![DEPLOYMENT play](https://awx.netorca.io/#/templates/job_template/42/details)
+
+When you run this play you should see any APPROVED Change Instances for the LOAD_BALANCER service move to COMPLETED. You will also see these load-balancers being deployed onto the lab F5 infrastructure. 
 
 #### Step 3.2. Change Instances are automatically deployed with Terraform
 
