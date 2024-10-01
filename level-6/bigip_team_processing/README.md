@@ -3,6 +3,9 @@ Service Owner teams are responsible for creating and maintaining their Services 
 Another responsibility of Service Owners is to process requests submitted by customers. Service Owners need to establish a workflow for processing Change Instances that come in to their queue.
 
 
+
+
+
 ## Definitions
 - **Service** is well-defined piece of infrastructure that Service Owner Team offers to the Customers. Service Owner team defines the Service in a form of JsonSchema and is responsible for further processing of the infrastructure implementation. Examples: Web Server, Load Balancer, Firewall, etc.
 - **Service Item** is an instance of a Service that is requested by a Customer. It is described by a Service Item name and a set of parameters defined in the Service JsonSchema. Service Item stores an actual state of Customer request.
@@ -13,6 +16,27 @@ Another responsibility of Service Owners is to process requests submitted by cus
 Change Instances are processed by Service Owner team according to the workflow defined by them. NetOrca workflow is implemented as a series of state transitions of Change Instances. 
 Changes can be processed manually (via GUI) or programatically (via API). It's up to Service Owner how processing of the Change Instances will be implemented. We highly encourage using automation-first approach and implementing processing of the Change Instances with API. This streamlines the workflow and makes it more reliable and easier to manage.
 
+### Service Owners - General Processing of Changes
+
+Customer requested changes will be published on NetOrca in the form of Change Instances for the particular service.
+
+There are two stages which need to be processed, one is an optional second level validation stage. In this stage the Service Owner can take the Consumers Change Instance tickets and validate them as required before approving them. This validation could be an automated check of an external or related resource, or it could be a simple approval.
+
+#### Validation Stage
+
+![level-6-change-validation](../images/level6_so_change_validation.gif)
+
+The process for automating this validation would be performed by any automation script such as ansible or a third party tool. The basic operation is as follows:
+
+1. Get APPROVED 
+The general processing of these changes will be the following:
+
+1. Service Owner team gets the APPROVED changes from the NetOrca API
+2. Service Owner playbook extracts the Consumer ServiceItem declarations and converts them into AS3.
+3. The AS3 is submitted to the BigIP devices
+4. If successfully submitted the ChangeInstance is marked as COMPLETED.
+
+This general process works for CREATE, DELETE and MODIFICATION of ServiceItems and can be completed imperatively or declaratively. 
 
 ## Change Instance state Lifecycle
 Change Instance Lifecycle is as follows:

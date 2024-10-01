@@ -3,6 +3,17 @@ Service Owners are responsible for creating and maintaining Service definitions 
 Services are defined in JsonSchema format which are then stored in GitLab repository.<br>
 All changes to the Service definitions are done via GitLab repository and submitted to NetOrca via CICD pipeline.
 
+
+### Service Owners - Schema Updates
+
+The Service Owner workflow for updating Schemas is:
+
+1. Make required schema changes within GitRepo
+2. Create merge request to main, build will run validation check and report any issues
+3. Merge, build will submit updated schema to NetOrca
+
+![level-6-so](../../images/level6_so.gif)
+
 ## Service Owner flow
 ### Step 1. Create Service definition in JsonSchema format
 

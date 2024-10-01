@@ -15,6 +15,43 @@ https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
 
 
 ## Declarative / GitOps workflow
+
+The customer (NetOrca Consumer) workflow is as follows:
+- Create a declaration for the Service in their Git Repo
+- Create a merge request, the CI/CD process will show any validation errors that require correction
+- Merge that to main, the CI/CD process will push it to NetOrca
+- On NetOrca view the change instances, when they are marked complete the config has been deployed to the infrastructure
+
+![level-6-consumer](../../images/level6_consumer.gif)
+
+### LOAD_BALANCER yaml format
+
+```yaml
+---
+# Filename app01.yml
+
+application1:
+  services:
+    LOAD_BALANCER:
+      - name: load_balancer1
+        partition: prod
+        location: dmz
+        comments: This is a new web server for testing
+        type: http
+        virtual_server:
+          ip: 10.1.10.152
+          port: 80
+        members:
+        - ip: 10.1.20.21
+          port: 30880
+
+```
+
+
+
+
+## Demo Walkthrough
+
 ### Step 1. Go to NetOrca Service Catalog, find a Service you want to request and get the example YAML definition.
 
 > Service Catalogue is the place where you can find details for all the Services offered via NetOrca.
