@@ -24,11 +24,20 @@ There are two stages which need to be processed, one is an optional second level
 
 #### Validation Stage
 
-![level-6-change-validation](../images/level6_so_change_validation.gif)
+![level-6-change-validation](../../images/level6_so_change_validation.gif)
 
 The process for automating this validation would be performed by any automation script such as ansible or a third party tool. The basic operation is as follows:
 
-1. Get APPROVED 
+The general processing of these changes will be the following:
+
+1. Service Owner team gets the PENDING changes from the NetOrca API
+2. Service Owner playbook validates the changes
+3. If valid the changes are marked as APPROVED
+
+#### Deployment Stage
+
+![level-6-change-submission](../../images/levl6_so_ChangeProcessing.gif)
+
 The general processing of these changes will be the following:
 
 1. Service Owner team gets the APPROVED changes from the NetOrca API
@@ -96,11 +105,11 @@ These are covered in detail in the NetOrca docs.
 In this demo we have set up two Ansible plays that will both validate (move to APPROVED) and deploy (move to COMPLETED) any customer Service Items to a lab F5
 
 These are located here:
-![VALIDATION play](https://awx.netorca.io/#/templates/job_template/41/details)
+[VALIDATION play](https://awx.netorca.io/#/templates/job_template/41/details)
 
 When you run this play you should see any PENDING change Instances for the LOAD_BALANCER service move to APPROVED
 
-![DEPLOYMENT play](https://awx.netorca.io/#/templates/job_template/42/details)
+[DEPLOYMENT play](https://awx.netorca.io/#/templates/job_template/42/details)
 
 When you run this play you should see any APPROVED Change Instances for the LOAD_BALANCER service move to COMPLETED. You will also see these load-balancers being deployed onto the lab F5 infrastructure. 
 
