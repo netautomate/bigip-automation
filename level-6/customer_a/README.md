@@ -2,7 +2,7 @@
 
 This guide provides a step-by-step overview of how to interact with NetOrca as a Customer in declarative/GitOps mode.<br>
 This setup requires property setup GitLab repository with CICD pipeline and NetOrca configuration.<br>
-GitOps approach is preferred as it allows for a more transparent and collaborative process.
+The GitOps approach allows for a more transparent and collaborative process. It also allows further protections and auditng when this is used in highly secure or regulated enterprise environments. 
 
 Benefits of using GitOps mode:
 - Merge Request process allows team to review changes before they are submitted
@@ -44,21 +44,21 @@ https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
 
 #### Step 3.1 Validation successful
 
-> - Once the pipeline is green, that meants the request is valid and can be merged to main branch.
+> - Once the pipeline is green, this indicates that the request is valid and can be merged to main branch.
 
 ![step-2](../../images/level6_demo_customer_step3_1.gif)
 
 #### Step 3.2. Validation failed
 
-> - In case of validation failure, you will see the error message in the pipeline logs. Most likely you didn't add required properties or made a typo.
-> - You will need to fix the request and update merge request.
+> - In case of validation failure, you will see the error message in the pipeline logs. This log will show you one or many validation errors that have occurred along with a description of the error. 
+> - You will need to fix the request and update the merge request.
 
 ![step-2-1](../../images/level6_demo_customer_step3_2.gif)
 
 ### Step 4. Merge MR (Merge Request) into the main branch and watch the CI/CD pipeline to run.
 
 > - After MR is merged, the Submission job will be triggered and changes will be pushed to NetOrca.
-> - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) and create a corresponding Change Instance.
+> - NetOrca will determine the type of change (CREATE/DELETE/MODIFY) for each Service Item and create a corresponding Change Instance. If a Service Item's yaml is unchanged NetOrca will not create any Change Instances (it is declarative)
 
 #### Step 4.1. CREATE Change Instance
 ![step-3](../../images/level6_demo_customer_step4_1.gif)
@@ -79,3 +79,18 @@ https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
 
 ![step-4](../../images/level6_demo_customer_step5.gif)
 
+
+### Step 6. Repeat to maintain you Service Item throughout it's lifecycle
+
+This process supports modification and deletion by default. 
+
+To perform a MODIFICATION: 
+- Change the required field of any Service  Items yaml declaration. 
+- Merge Request, check validation, then merge to main. 
+- This will resubmit to NetOrca, which will determine the changes and create a MODIFY Change Instance for processing.
+
+To perform a DELETE:
+- Delete the particular Service Items yaml from the application file in your repository. 
+- Merge request, check validation then merge to main. 
+- This will submit to NetOrca which will create a DELETE Change Instance for that Service Item.
+- This will be processed and the Service Item will go into the DECOMISSIONED state once that is completed. 

@@ -1,6 +1,6 @@
 # Full lifecycle self-service
 
-In `Level-6` we evolve the automation framework into a scalable customer centric solution that supports full lifecycle self-service. 
+In `Level-6` we evolve the automation framework into a scalable customer-centric solution that supports full lifecycle self-service. 
 To do this we utilise the **NetOrca** product provided by **NetAutomate** which provides an orchestration layer to abstract how a service is offered vs how it is requested by the customer. 
 
 The end result of this is that our diagram is changed to the following:
@@ -8,9 +8,13 @@ The end result of this is that our diagram is changed to the following:
 
 ![level-6](../images/lvl6_img1.png)
 
-As overview, NetOrca has replaced the need for an infrastructure as code repository for the bigip team. Allowing for their declarations to be derived directly from the customer requested state. 
+As overview, NetOrca has replaced the need for an infrastructure as code repository for the BiIP team. Allowing for their declarations to be derived directly from the customer requested state. 
 
-The repositories that the bigip team now owns are for defining the service schema, and managing the terraform/ansible plays that are required to push the config to BigIP.
+The repositories that the BigIP team now own are for defining the service schema, and managing the terraform/ansible plays that are required to push the config to BigIP.
+
+Customers/consumers of the services offered through NetOrca then can just use their own infrastructure git repositories, using a pre-defined template and CI/CD process. They can put requests for load-balancers direct into this repo and track the status of this infrastructure via the NetOrca GUI. 
+
+We will also show an option to do this via GUI only, for teams which may not want to use git. 
 
 # Table of Contexts
 
@@ -27,7 +31,7 @@ Level-6 does this using NetOrca.
 
 The benefits to this are:
 - **Customer Input**
-  - Customer CI/CD process is simplified, it no longer needs to build the AS3
+  - Customer CI/CD process is simplified, it no longer needs to build the AS3 in the pipeline and is more easily consumed. 
   - Delete and Modify are directly supported from the customer repository
   - Synching between an upstream and downstream repo is no longer required.
   - Complexity is abstracted, no need for customers to ever see AS3, even in a CI/CD process. 
@@ -76,7 +80,7 @@ The Service Owner workflow for updating Schemas is:
 
 Customer requested changes will be published on NetOrca in the form of Change Instances for the particular service.
 
-There are two stages which need to be processed, one is an optional second level validation stage. In this stage the Service Owner can take the Consumers Change Instance tickets and validate them as required before approving them. This validation could be an auotmated check of an external or related resource, or it could be a simple approval.
+There are two stages which need to be processed, one is an optional second level validation stage. In this stage the Service Owner can take the Consumers Change Instance tickets and validate them as required before approving them. This validation could be an automated check of an external or related resource, or it could be a simple approval.
 
 #### Validation Stage
 
@@ -129,9 +133,9 @@ application1:
 
 ### Look into the repositories
 
-We have created 3 repositories that you can play around with
+We have created 3 repositories that you can view (please contact to add your account for edit access)
 - **Customer A**                    -> https://gitlab.com/netorca_public/bigip-automation/level-6/customer-a
-- **Customer B**                    -> doesn't have a configuration repository - this team's requests are submitted via the NetOrca Submission Builder (GUI)
+- **Customer B**                    -> does not have a configuration repository - this team's requests are submitted via the NetOrca Submission Builder (GUI)
 
 - **(Service Owner) BIGIP Team**    -> https://gitlab.com/netorca_public/bigip-automation/level-6/service-owner-bigip-team
 - **BIGIP Team Automation**         -> https://gitlab.com/netorca_public/bigip-automation/bigip-team-automation (NOTE: this can be put in the ServiceOwner repo)
