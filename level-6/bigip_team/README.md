@@ -139,12 +139,11 @@ BigIP Load Balancer service
 - **name**: The name of the load balancer (string).
   - Must follow the pattern `^([a-z]{1}[a-z0-9-]{1,60})$`.
   - Examples: `app01`, `webserver01`.
-
-- **partition**: BigIP partition where Load Balancer will be deployed 
-  - Must be one of: `prod, dev, sit, uat, qa`
-
-- **location**: Internal setting of the organisation, this field may be used as logic for BigIP device where Load Balancer will be deployed
-  - Must be a string
+  
+- **partition**: The environment in which the load balancer resides.
+  - Enum: `prod`, `dev`, `sit`, `uat`, `qa`.
+  
+- **location**: The network location, such as `dmz` or `internal`.
   
 - **type**: The protocol type of the load balancer.
   - Enum: `http`, `https`, `tcp`.
@@ -154,10 +153,11 @@ BigIP Load Balancer service
     - `ip`: IPv4 address of the virtual server.
     - `port`: Port number for the virtual server.
 
-- **members**: Nodes/members of a Virtual Server
-  - Fields:
-    - `ip`: IPv4 address of the node.
-    - `port`: Port number for the node.
+- **members**: A list of IP addresses and ports for backend servers (array).
+  - Each member has:
+    - `ip`: IPv4 address of the backend server.
+    - `port`: Port number for the backend server.
+
 
 ## Example Usage
 
